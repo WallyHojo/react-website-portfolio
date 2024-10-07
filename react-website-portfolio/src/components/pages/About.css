@@ -1,0 +1,16 @@
+.about-container {background: linear-gradient(-45deg, rgb(36 94 138 / 50%) 0.00%, rgb(26 48 87 / 10%) 29.99%, rgb(29 37 101 / 0%) 70.01%, rgb(63 39 139) 100.00%);}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+  .about-img img {opacity: 0.25;}
+}
+@media screen and (max-width: 575px) {
+    .about-img {right: -75%; bottom: 0;}
+  }
+@media screen and (min-width: 576px) {
+  .about-img {right: -25%; bottom: 0;}
+}
+@media screen and (min-width: 1200px) {
+  .about-img {right: 0; bottom: 0;}
+}
