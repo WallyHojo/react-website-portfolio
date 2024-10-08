@@ -1,0 +1,29 @@
+#welcome-section {padding: clamp(30px, 12vw, 60px) 0;}
+.welcome-avatar img {max-width: clamp(380px, 45vw, 680px);}
+.welcome-text :is(h1,h3,h4) {display: flex; justify-content: space-between; margin: 0; text-align: center; line-height: 1;}
+.welcome-text h1::before, .welcome-text h1::after {position: absolute; text-transform: lowercase; font-family: "La Belle Aurore", cursive; font-weight: 400; font-style: normal; font-size: 16px; opacity: 0.6; color: var(--nav-not-scrolled-active);}
+.welcome-text h1::before {content:'<h1>'; top: 0; left: 0;}
+.welcome-text h1::after {content:'</h1>'; bottom: -10px; right: 0;}
+.welcome-text h3 {margin: 10px 0 clamp(15px, 2vw, 30px);}
+.welcome-text span {flex: 1;}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+    .welcome-text h1 {font-size: clamp(40px, 14vw, 100px);}
+    .welcome-text h3 {font-size: clamp(24px, 6vw, 46px);}
+    .welcome-text h4 {font-size: clamp(16px, 3vw, 20px);} 
+}
+@media screen and (max-width: 576px) {
+    .welcome-text {padding-top: 45px;}
+    .welcome-text h1::before {top: -5px;}
+    .welcome-text h1::after {bottom: -12px;}
+}
+@media screen and (min-width: 768px) {
+    .welcome-text {order: 2; z-index: 1;}
+    .welcome-text h1 {font-size: clamp(70px, 10vw, 150px);}
+    .welcome-text h3 {font-size: clamp(30px, 5vw, 60px);}
+    .welcome-text h4 {font-size: clamp(20px, 4vw, 40px);}
+    .welcome-avatar {flex-basis: 60%;}
+    .welcome-avatar img {position: absolute; left: 0; top: 50%; width: 100%; transform: translateY(-50%);}
+}

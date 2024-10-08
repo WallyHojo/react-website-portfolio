@@ -1,0 +1,33 @@
+:root {
+    --c-progress-bar-size: 140px;
+    --c-progress-bar-stroke-width: 6
+}
+
+/*#skills-section {background-color: rgb(33 94 152 / 50%); border-radius: 0 0 15% 0 / 0 0 clamp(0%, 15vw, 25%) 0; box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);}*/
+/*#skills-section::after {content: ''; background: linear-gradient(132deg, rgb(36, 94, 138) 0.00%, rgb(26, 48, 87) 29.99%, rgb(29, 37, 101) 70.01%, rgb(63 39 139) 100.00%); position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -1;}*/
+.skills-container {background: linear-gradient(135deg, rgb(36 94 138 / 50%) 0%, rgb(26 48 87 / 0%) 29.99%, rgb(29 37 101 / 10%) 70.01%, rgb(63 39 139) 100.00%); box-shadow: -40px 20px 20px 0 rgb(0 0 0 / 10%);}
+.skills-wrapper {height: 100%;}
+
+.c-progress-bar {width: var(--c-progress-bar-size);}
+.progress-pie_shape {width: 100%; position: relative;}
+.progress-pie_shape svg {display: block; width: var(--c-progress-bar-size); height: var(--c-progress-bar-size); stroke-width: var(--c-progress-bar-stroke-width);}
+.progress-pie_bg {stroke: currentColor; opacity: .125;}
+.progress-pie_fill {stroke: currentColor;}
+.progress-pie_value {position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
+.progress-pie_value i {font-size: .65em;}
+.c-progress-bar .progress-pie_fill, .c-progress-bar .progress-pie_value {visibility: hidden;}
+
+.skill h5 {font-size: clamp(14px, 4vw, 20px);}
+.skill svg {max-height: clamp(100px, 10vw, 140px);}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+    .skills-container {flex-direction: column; justify-content: space-between;}
+}
+@media screen and (min-width: 768px) {
+    .skills-wrapper p {line-height: 1.8;}
+}
+@media screen and (min-width: 1680px) {
+    .skills-container {border-radius: 15% 0 15% 0 / clamp(0%, 12vw, 25%) 0 clamp(0%, 15vw, 25%) 0 !important;}
+}
