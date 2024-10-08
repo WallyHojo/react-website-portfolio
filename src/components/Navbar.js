@@ -56,6 +56,9 @@ function Navbar() {
               <li className='nav-item'>
                 <Link to="contact-section" spy={true} smooth={true} duration={500} activeClass="active" className='nav-link text-uppercase' onSetActive={handleSetActive} onClick={handleNavClick}>Contact</Link>
               </li>
+              <li className='nav-item d-sm-none d-md-block'>
+                <a href='https://drive.google.com/file/d/1PBk4mVGJZaBAwNw8WxZvjIBzykWPtCNs/view?usp=drive_link' target='_blank' activeClass="active" className='nav-link text-uppercase' onSetActive={handleSetActive} onClick={handleNavClick}>Resume</a>
+              </li>              
             </ul>
           </div>
         </nav>
