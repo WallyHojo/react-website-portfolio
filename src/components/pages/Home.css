@@ -11,7 +11,7 @@ main div[id*="-section"] {overflow: hidden;}
 }
 
 .section-heading {overflow: hidden;}
-.section-heading h2 {font-size: clamp(40px, 14vw, 80px); line-height: 1.025; color: var(--hover);}
+.section-heading h2 {font-size: clamp(40px, 14vw, 80px); /*line-height: 1.025;*/ color: var(--hover);}
 .heading-line {width: 100%; height: 50px; box-shadow: inset 0 -20px 10px 0 rgb(0 0 0 / 10%); border-bottom: solid 1px #0c0c0c; z-index: 1;}
 
 .bg {width: 100%; height: 100%;}
