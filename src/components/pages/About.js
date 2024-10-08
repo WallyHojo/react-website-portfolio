@@ -21,7 +21,7 @@ function About() {
           </TrackVisibility>
         </div>
       </div>        
-      <div className='about-container position-relative rounded-top' style={{paddingBottom: headerHeight}}>
+      <div className='about-container rounded-top' style={{paddingBottom: headerHeight}}>
         <div className='container-xxl d-flex align-items-center'>
           <div className='about-wrapper d-lg-block'>
             <div className='row'>

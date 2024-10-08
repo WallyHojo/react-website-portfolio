@@ -19,6 +19,7 @@
 
 @media screen and (max-width: 991px) {
     #header .container {max-width: initial;}
+    #header .nav-link {font-weight: 500;}
 }
 @media screen and (min-width: 992px) {
     .navbar-nav {justify-content: space-between; flex-basis: 60%;}

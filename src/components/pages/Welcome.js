@@ -55,7 +55,7 @@ function Welcome() {
                 }
             </TrackVisibility>
             </div>
-            <div className='welcome-avatar'>
+            <div className='welcome-avatar text-center'>
             <TrackVisibility>
                 {({isVisible}) =>
                 <img src={pfp} className={isVisible ? 'animate__animated animate__fadeIn animate__slow' : 'animate__animated animate__fadeOut animate__slow'} alt='profile' />

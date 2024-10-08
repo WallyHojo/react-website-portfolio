@@ -15,19 +15,19 @@ function Work() {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1024 },
-      items: 4
+      items: 4,
     },    
     desktop: {
       breakpoint: { max: 1023, min: 992 },
-      items: 3
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 991, min: 576 },
-      items: 2
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 575, min: 0 },
-      items: 1
+      items: 1,
     }
   };
 
@@ -85,7 +85,7 @@ function Work() {
                   src={image.thumb}
                   alt={`image ${image.id}`}             
                   className='img-fluid'
-                  style={{ cursor: 'pointer', margin: '10px' }}
+                  style={{ width: '100%', padding: '10px', cursor: 'pointer' }}
                   onClick={() => handleImageClick(image.id, image.url)}
                 />
               ))}                
