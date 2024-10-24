@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/react-website-portfolio/static/css/main.fa3584db.css",
-    "main.js": "/react-website-portfolio/static/js/main.34d1b38b.js",
+    "main.js": "/react-website-portfolio/static/js/main.d041cf91.js",
     "static/media/portrait.webp": "/react-website-portfolio/static/media/portrait.7acc1abe4c8a0490b07c.webp",
-    "static/media/pfp.webp": "/react-website-portfolio/static/media/pfp.175cde8e0a00dd21fb1e.webp",
+    "static/media/pfp.webp": "/react-website-portfolio/static/media/pfp.9f1e71c4376c8d35c1dd.webp",
     "static/media/logo.webp": "/react-website-portfolio/static/media/logo.3e5fd97eea50481cd65b.webp",
     "static/media/revicons.eot": "/react-website-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/react-website-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/react-website-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-website-portfolio/index.html",
     "main.fa3584db.css.map": "/react-website-portfolio/static/css/main.fa3584db.css.map",
-    "main.34d1b38b.js.map": "/react-website-portfolio/static/js/main.34d1b38b.js.map"
+    "main.d041cf91.js.map": "/react-website-portfolio/static/js/main.d041cf91.js.map"
   },
   "entrypoints": [
     "static/css/main.fa3584db.css",
-    "static/js/main.34d1b38b.js"
+    "static/js/main.d041cf91.js"
   ]
 }
