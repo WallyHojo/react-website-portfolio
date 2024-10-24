@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-website-portfolio/static/css/main.ee02ed1e.css",
-    "main.js": "/react-website-portfolio/static/js/main.caf3dc24.js",
+    "main.css": "/react-website-portfolio/static/css/main.ed444ca6.css",
+    "main.js": "/react-website-portfolio/static/js/main.e1df16df.js",
     "static/media/portrait.webp": "/react-website-portfolio/static/media/portrait.7acc1abe4c8a0490b07c.webp",
     "static/media/pfp.webp": "/react-website-portfolio/static/media/pfp.9f1e71c4376c8d35c1dd.webp",
     "static/media/logo.webp": "/react-website-portfolio/static/media/logo.3e5fd97eea50481cd65b.webp",
@@ -9,11 +9,11 @@
     "static/media/revicons.ttf": "/react-website-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/react-website-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-website-portfolio/index.html",
-    "main.ee02ed1e.css.map": "/react-website-portfolio/static/css/main.ee02ed1e.css.map",
-    "main.caf3dc24.js.map": "/react-website-portfolio/static/js/main.caf3dc24.js.map"
+    "main.ed444ca6.css.map": "/react-website-portfolio/static/css/main.ed444ca6.css.map",
+    "main.e1df16df.js.map": "/react-website-portfolio/static/js/main.e1df16df.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee02ed1e.css",
-    "static/js/main.caf3dc24.js"
+    "static/css/main.ed444ca6.css",
+    "static/js/main.e1df16df.js"
   ]
 }
