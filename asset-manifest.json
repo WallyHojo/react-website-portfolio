@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/react-website-portfolio/static/css/main.400ee3ce.css",
-    "main.js": "/react-website-portfolio/static/js/main.66e5a38a.js",
-    "static/media/elhart-devices_img.webp": "/react-website-portfolio/static/media/elhart-devices_img.0d33925143663b6e46e1.webp",
+    "main.css": "/react-website-portfolio/static/css/main.e40d0fbf.css",
+    "main.js": "/react-website-portfolio/static/js/main.1e19ddf7.js",
+    "static/media/devices_img.webp": "/react-website-portfolio/static/media/devices_img.88552feff672f09b7ce1.webp",
     "static/media/portrait.webp": "/react-website-portfolio/static/media/portrait.7acc1abe4c8a0490b07c.webp",
-    "static/media/elhart_img.webp": "/react-website-portfolio/static/media/elhart_img.46c17d1f0e9c150636c9.webp",
-    "static/media/404-devices_img.webp": "/react-website-portfolio/static/media/404-devices_img.88552feff672f09b7ce1.webp",
+    "static/media/desktop_img.webp": "/react-website-portfolio/static/media/desktop_img.677b4d8ba38e73d77f0e.webp",
     "static/media/pfp.webp": "/react-website-portfolio/static/media/pfp.9f1e71c4376c8d35c1dd.webp",
     "static/media/expectations_img.webp": "/react-website-portfolio/static/media/expectations_img.446fb5e64840dd901187.webp",
     "static/media/calculate-payments_img.webp": "/react-website-portfolio/static/media/calculate-payments_img.0a9176ca6f22a6d00ad8.webp",
     "static/media/personal-info_img.webp": "/react-website-portfolio/static/media/personal-info_img.df50ff9f95d569d12d88.webp",
-    "static/media/404_img.webp": "/react-website-portfolio/static/media/404_img.677b4d8ba38e73d77f0e.webp",
     "static/media/calculate-trade-in_img.webp": "/react-website-portfolio/static/media/calculate-trade-in_img.71a62c55c3e57aa14f93.webp",
+    "static/media/mobile_img.webp": "/react-website-portfolio/static/media/mobile_img.a9476c6e36eeca2b412b.webp",
     "static/media/thumb_img.webp": "/react-website-portfolio/static/media/thumb_img.17617c614d1abd66a2db.webp",
     "static/media/logo.webp": "/react-website-portfolio/static/media/logo.3e5fd97eea50481cd65b.webp",
     "static/media/revicons.eot": "/react-website-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/react-website-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/react-website-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-website-portfolio/index.html",
-    "main.400ee3ce.css.map": "/react-website-portfolio/static/css/main.400ee3ce.css.map",
-    "main.66e5a38a.js.map": "/react-website-portfolio/static/js/main.66e5a38a.js.map"
+    "main.e40d0fbf.css.map": "/react-website-portfolio/static/css/main.e40d0fbf.css.map",
+    "main.1e19ddf7.js.map": "/react-website-portfolio/static/js/main.1e19ddf7.js.map"
   },
   "entrypoints": [
-    "static/css/main.400ee3ce.css",
-    "static/js/main.66e5a38a.js"
+    "static/css/main.e40d0fbf.css",
+    "static/js/main.1e19ddf7.js"
   ]
 }
