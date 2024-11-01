@@ -1,6 +1,14 @@
-.contact-wrapper {flex: 1;}
-.contact-wrapper :is(input:not([type="submit"]), textarea) {width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 6px;}
-.contact-wrapper input {height: 50px;}
-.contact-wrapper label {color: #999;}
-.contact-wrapper input[type="submit"] {width: 150px; border-radius: 6px;}
-.contact-wrapper input:focus:invalid {border-color: red;}
+/* Form */
+.contact-form :is(input:not([type="submit"]), textarea) {width: 100%; margin-bottom: 10px; padding: 10px; border-radius: 6px;}
+.contact-form label {color: #999;}
+.contact-form input {height: 50px;}
+.contact-form :is(input, textarea) {box-shadow: 0 0 0 var(--nav-scrolled-active); transition: box-shadow 0.2s ease-out;}
+.contact-form input[type="submit"] {background-color: var(--nav-scrolled-active); width: 150px; border-radius: 6px;}
+.contact-form :is(input:is(:hover,:focus:not(:invalid),:active), textarea:is(:hover,:focus,:active)) {outline: 1px solid var(--nav-scrolled-active); box-shadow: 0 0 10px var(--nav-scrolled-active);}
+.contact-form input:focus:invalid {border-color: red;}
+
+/* Media Queries */
+
+@media screen and (max-width: 991px) {
+    .contact-form input {height: 40px;}
+}

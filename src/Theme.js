@@ -34,6 +34,13 @@ export const ThemeProvider = ({ children }) => {
       // Determine if the user has scrolled past the header height
       setIsScrolled(currentScrollTop > headerHeight);
 
+      // Prevent hiding the header if at the top of the page
+      if (currentScrollTop === 0) {
+        setIsHeaderVisible(true);
+        lastScrollTop.current = 0; // Reset last scroll position
+        return;
+      }
+
       // Determine if scrolling up or down
       if (currentScrollTop > lastScrollTop.current) {
         // Scrolling down
@@ -59,7 +66,7 @@ export const ThemeProvider = ({ children }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }; 
-  }, []);
+  }, [headerHeight]);
 
   /*
   Scroll to section

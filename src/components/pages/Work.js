@@ -1,15 +1,75 @@
 import React from 'react';
-import { useContext, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import TrackVisibility from 'react-on-screen';
 import Carousel from 'react-multi-carousel';
 import './Work.css';
 import 'react-multi-carousel/lib/styles.css';
-import { ThemeContext } from '../../Theme';
+
+// enhanced leads
+import enhancedLeadsThumb from '../../assets/images/work/enhanced-leads/thumb_img.webp';
+import enhancedLeads1 from '../../assets/images/work/enhanced-leads/personal-info_img.webp';
+import enhancedLeads2 from '../../assets/images/work/enhanced-leads/calculate-trade-in_img.webp';
+import enhancedLeads3 from '../../assets/images/work/enhanced-leads/calculate-payments_img.webp';
+import enhancedLeads4 from '../../assets/images/work/enhanced-leads/expectations_img.webp';
+
+// 404
+import fourOhFourThumb from '../../assets/images/work/404/thumb_img.webp';
+import fourOhFour1 from '../../assets/images/work/404/devices_img.webp';
+import fourOhFour2 from '../../assets/images/work/404/tablet_img.webp';
+import fourOhFour3 from '../../assets/images/work/404/mobile_img.webp';
+
+// elhart
+import elhartThumb from '../../assets/images/work/elhart/thumb_img.webp';
+import elhart1 from '../../assets/images/work/elhart/devices_img.webp';
+import elhart2 from '../../assets/images/work/elhart/tablet_img.webp';
+import elhart3 from '../../assets/images/work/elhart/mobile_img.webp';
+
+// lodi
+import lodiThumb from '../../assets/images/work/lodi/thumb_img.webp';
+import lodi1 from '../../assets/images/work/lodi/devices_img.webp';
+import lodi2 from '../../assets/images/work/lodi/tablet_img.webp';
+import lodi3 from '../../assets/images/work/lodi/mobile_img.webp';
+
+// fivestar
+import fivestarThumb from '../../assets/images/work/fivestar/thumb_img.webp';
+import fivestar1 from '../../assets/images/work/fivestar/tablet_img.webp';
+import fivestar2 from '../../assets/images/work/fivestar/static_img.webp';
+
+// karhunt
+import karhuntThumb from '../../assets/images/work/karhunt/thumb_img.webp';
+import karhunt1 from '../../assets/images/work/karhunt/tablet_img.webp';
+import karhunt2 from '../../assets/images/work/karhunt/static_img.webp';
+
+// finance
+import financeThumb from '../../assets/images/work/finance/thumb_img.webp';
+import finance1 from '../../assets/images/work/finance/static_img.webp';
+
+// web hosting
+import hostingThumb from '../../assets/images/work/web-hosting/thumb_img.webp';
+import hosting1 from '../../assets/images/work/web-hosting/tablet_img.webp';
+import hosting2 from '../../assets/images/work/web-hosting/static_img.webp';
+
+// eminence
+import eminenceThumb from '../../assets/images/work/eminence/thumb_img.webp';
+import eminence1 from '../../assets/images/work/eminence/tablet_img.webp';
+import eminence2 from '../../assets/images/work/eminence/static_img.webp';
+
+// fictiv
+import fictivThumb from '../../assets/images/work/fictiv/thumb_img.webp';
+import fictiv1 from '../../assets/images/work/fictiv/tablet_img.webp';
+import fictiv2 from '../../assets/images/work/fictiv/static_img.webp';
+
+// im2
+import im2Thumb from '../../assets/images/work/im2/thumb_img.webp';
+import im21 from '../../assets/images/work/im2/tablet_img.webp';
+import im22 from '../../assets/images/work/im2/static_img.webp';
+
+// infared
+import infaredThumb from '../../assets/images/work/infared/thumb_img.webp';
+import infared1 from '../../assets/images/work/infared/tablet_img.webp';
+import infared2 from '../../assets/images/work/infared/static_img.webp';
 
 function Work() {
-
-  // From Theme.js
-  const { headerHeight } = useContext(ThemeContext); //header height hook
 
   const responsive = {
     superLargeDesktop: {
@@ -31,21 +91,132 @@ function Work() {
     }
   };
 
-  const [modalData, setModalData] = useState({ id: '', thumb: '', url: '' });
+  const [modalData, setModalData] = useState({ id: '', title: '', thumb: '', url: [] });
   const [showModal, setShowModal] = useState(false);
   const [fadeIn, setFadeIn] = useState(false); // For custom fade-in
 
   const images = [
-    { id: 1, thumb: 'https://placehold.co/320x240/EEE/31343C', url: 'https://placehold.co/640x480/EEE/31343C' },
-    { id: 2, thumb: 'https://placehold.co/320x240/EEE/31343C', url: 'https://placehold.co/640x480/EEE/31343C' },
-    { id: 3, thumb: 'https://placehold.co/320x240/EEE/31343C', url: 'https://placehold.co/640x480/EEE/31343C' },
-    { id: 4, thumb: 'https://placehold.co/320x240/EEE/31343C', url: 'https://placehold.co/640x480/EEE/31343C' },
-    { id: 5, thumb: 'https://placehold.co/320x240/EEE/31343C', url: 'https://placehold.co/640x480/EEE/31343C' },
+    {
+      id: 1,
+      title: 'Enhanced Leads',
+      thumb: [enhancedLeadsThumb],
+      urls: [
+        [enhancedLeads1],
+        [enhancedLeads2],
+        [enhancedLeads3],
+        [enhancedLeads4],
+      ],
+    },
+    {
+      id: 2,
+      title: '404 Error Page',
+      thumb: [fourOhFourThumb],
+      urls: [
+        [fourOhFour1],
+        [fourOhFour2],
+        [fourOhFour3],
+      ],
+    },
+    {
+      id: 3,
+      title: 'Elhart Group Website',
+      thumb: [elhartThumb],
+      urls: [
+        [elhart1],
+        [elhart2],
+        [elhart3],
+      ],
+    },
+    {
+      id: 4,
+      title: 'Lodi Honda Website',
+      thumb: [lodiThumb],
+      urls: [
+        [lodi1],
+        [lodi2],
+        [lodi3],
+      ],
+    },
+    {
+      id: 5,
+      title: 'Fivestar Toyota Design',
+      thumb: [fivestarThumb],
+      urls: [
+        [fivestar1],
+        [fivestar2],
+      ],
+    },
+    {
+      id: 6,
+      title: 'Karhunt Design',
+      thumb: [karhuntThumb],
+      urls: [
+        [karhunt1],
+        [karhunt2],
+      ],
+    },
+    {
+      id: 7,
+      title: 'Finance Design',
+      thumb: [financeThumb],
+      urls: [
+        [finance1],
+      ],
+    },
+    {
+      id: 8,
+      title: 'Web Hosting Design',
+      thumb: [hostingThumb],
+      urls: [
+        [hosting1],
+        [hosting2],
+      ],
+    },
+    {
+      id: 9,
+      title: 'Team Fortress Classic Gaming Website',
+      thumb: [eminenceThumb],
+      urls: [
+        [eminence1],
+        [eminence2],
+      ],
+    },
+    {
+      id: 10,
+      title: 'Fictiv Innovations Website',
+      thumb: [fictivThumb],
+      urls: [
+        [fictiv1],
+        [fictiv2],
+      ],
+    },
+    {
+      id: 11,
+      title: 'im2 Portfolio Design',
+      thumb: [im2Thumb],
+      urls: [
+        [im21],
+        [im22],
+      ],
+    },
+    {
+      id: 12,
+      title: 'Infared Portfolio Website',
+      thumb: [infaredThumb],
+      urls: [
+        [infared1],
+        [infared2],
+      ],
+    },                            
   ];
 
-  const handleImageClick = (id, url) => {
-    setModalData({ id, url });
-    setShowModal(true);
+  const handleImageClick = (id, title) => {
+    const selectedImage = images.find(image => image.id === id);
+    if (selectedImage) {
+      setModalData({ id, title, urls: selectedImage.urls });
+      setShowModal(true);
+      document.body.classList.add('modal-open');
+    }
   };
 
   const handleCloseModal = () => {
@@ -53,6 +224,7 @@ function Work() {
     setTimeout(() => {
       setShowModal(false); // Hide modal after fade-out is complete
     }, 300); // Match the fade-out transition duration
+    document.body.classList.remove('modal-open');
   };  
 
   // Add fade-in effect after modal is opened
@@ -64,9 +236,24 @@ function Work() {
     }
   }, [showModal]);
 
+  const modal = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };  
+
   return (    
     <>
-      <div className='section-heading work-heading' style={{paddingTop: headerHeight}}>
+      <div className='section-heading work-heading'>
         <div className='container-xxl'>
           <TrackVisibility partialVisibility>
             {({isVisible}) =>        
@@ -75,22 +262,30 @@ function Work() {
           </TrackVisibility>
         </div>
       </div>           
-      <div className='work-container' style={{paddingBottom: headerHeight}}>
-        <div className='container-xxl'>
-          <div className='work-wrapper d-flex flex-column'>
-            <Carousel responsive={responsive} infinite={true} className='work-slider mt-auto mb-auto pb-5'>
-              {images.map((image) => (
-                <img
-                  key={image.id}
-                  src={image.thumb}
-                  alt={`image ${image.id}`}             
-                  className='img-fluid'
-                  style={{ width: '100%', padding: '10px', cursor: 'pointer' }}
-                  onClick={() => handleImageClick(image.id, image.url)}
-                />
-              ))}                
-            </Carousel>
-          </div>
+      <div className='work-container position-relative'>
+        <div className='container-xxl d-flex flex-column'>
+          <div className='mt-auto'>
+            <TrackVisibility>
+              {({isVisible}) =>  
+                <div className={isVisible ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'}>
+                  <h3 className='mb-2'>Designs that Inspire, Solutions that Elevate</h3>
+                  <p className='lead'>Explore a curated selection of my projects that showcase my skills and creativity. From innovative design solutions to impactful branding initiatives, each piece reflects my passion and dedication to delivering exceptional results. Click on the images to view more about the process and inspiration behind each project!</p>
+                </div>
+              }
+            </TrackVisibility>  
+          </div>                      
+          <Carousel responsive={responsive} infinite={true} className='work-slider mt-auto mb-auto pb-5' autoPlay={true} autoPlaySpeed={3000}>
+            {images.map((image) => (
+              <img
+                key={image.id}
+                src={image.thumb}
+                alt={image.title}
+                className='img-fluid'
+                style={{ width: '100%', cursor: 'pointer' }}
+                onClick={() => handleImageClick(image.id, image.title)}
+              />
+            ))}                
+          </Carousel>
         </div>
       </div>
       <span className='page position-absolute'>
@@ -100,23 +295,28 @@ function Work() {
           }
         </TrackVisibility>
       </span> 
-
+      
       {showModal && (
-        <div className={`modal modal-xl ${fadeIn ? 'fade-in' : 'fade-out'}`} style={{ display: 'block', opacity: fadeIn ? 1 : 0 }} tabIndex="-1" role="dialog">
-          <div className="modal-dialog" role="document">
+        <div className={`modal ${fadeIn ? 'fade-in' : 'fade-out'}`} style={{ display: 'block', opacity: fadeIn ? 1 : 0 }} tabIndex="-1" role="dialog">
+          <div className="modal-dialog modal-fullscreen" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title">Image Details</h5>
-                <button type="button" className="close" onClick={handleCloseModal}>
+                <h5 className="modal-title"><small>{modalData.title}</small></h5>
+                <button type="button" className="display-6 close text-white" onClick={handleCloseModal}>
                   <span>&times;</span>
                 </button>
               </div>
-              <div className="modal-body">
-                <img src={modalData.url} alt={`Image ${modalData.id}`} style={{ maxWidth: '100%' }} />
-                <p>Data ID: {modalData.id}</p>
+              <div className="modal-body position-relative">
+              <Carousel responsive={modal} className='modal-slider'>
+                {modalData.urls.map((url, index) => (
+                  <div key={index}>
+                    <img src={url} className='mx-auto d-block rounded-3' alt={`Image ${modalData.id} - ${index + 1}`} />
+                  </div>
+                ))}
+              </Carousel>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>
+                <button type="button" className="btn btn-secondary btn-lg" onClick={handleCloseModal}>
                   Close
                 </button>
               </div>

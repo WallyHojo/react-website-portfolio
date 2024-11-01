@@ -1,5 +1,4 @@
 main div[id*="-section"] {overflow: hidden;}
-/*main div[id*="-section"]:not(#welcome-section,#about-section) {padding: 0 0 clamp(30px, 12vw, 60px);}*/
 .rounded-top {border-radius: 0 15% 0 0 / 0 clamp(0%, 12vw, 25%) 0 0 !important; box-shadow: 0 -10px 20px 0 rgb(0 0 0 / 10%); overflow: hidden;}
 .rounded-bottom {border-radius: 0 0 15% 0 / 0 0 clamp(0%, 12vw, 25%) 0 !important; box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%); overflow: hidden;}
 .top-gradient {background: linear-gradient(62deg, rgb(36, 94, 138) 0.00%, rgb(26, 48, 87) 29.99%, rgb(29, 37, 101) 70.01%, rgb(63 39 139) 100.00%); /*background-size: 180% 180%;*/ z-index: -1; /*animation: grgradient-animationadient 5s ease infinite;*/}
@@ -11,7 +10,7 @@ main div[id*="-section"] {overflow: hidden;}
 }
 
 .section-heading {overflow: hidden;}
-.section-heading h2 {font-size: clamp(40px, 14vw, 80px); /*line-height: 1.025;*/ color: var(--hover);}
+.section-heading h2 {font-size: clamp(40px, 8vw, 80px); line-height: 0.85; color: var(--hover);}
 .heading-line {width: 100%; height: 50px; box-shadow: inset 0 -20px 10px 0 rgb(0 0 0 / 10%); border-bottom: solid 1px #0c0c0c; z-index: 1;}
 
 .bg {width: 100%; height: 100%;}
@@ -29,11 +28,10 @@ main div[id*="-section"] {overflow: hidden;}
 .scroll {right: -45px; bottom: 80px; z-index: 2; width: 135px; text-align: right; text-decoration: none; font-size: 14px; letter-spacing: 2px; line-height: 1; color: inherit; transform: rotate(90deg); opacity: 1; transition: opacity 0.3s ease-in;}
 a.scroll {cursor: pointer;}
 
-.page {left: 15px; bottom: 45px;}
-.page .number::after {content: "0" attr(data-id); font-size: clamp(70px, 10vw, 150px); font-weight: 800; line-height: 1; text-decoration: underline; opacity: 0.1;}
+.page {left: 15px; bottom: 35px;}
+.page .number::after {content: "0" attr(data-id); font-size: clamp(40px, 10vw, 150px); font-weight: 800; line-height: 1; text-decoration: underline; opacity: 0.1;}
 
 .tags {left: 15px; font-family: "La Belle Aurore", cursive; font-weight: 400; font-style: normal; opacity: 0.6; color: var(--nav-not-scrolled-active);}
-.top-tags {top: 86px;}
 .bottom-tags {bottom: 10px;}
 
 .hide {visibility: hidden; opacity: 0;}
@@ -42,4 +40,13 @@ a.scroll {cursor: pointer;}
 
 @media screen and (max-width: 991px) {
     main > div[id*="-section"] [class*="container"] {max-width: initial; height: 100%;}
+}
+
+@media only screen and (max-width: 1279px) and (orientation: portrait) {
+    main div[id*="-section"] {height: 100vh !important;}
+}
+
+@media only screen and (max-width: 1280px) and (orientation: landscape) {
+    main div[id*="-section"] {height: initial !important;}
+    div[class*="-container"] {padding-top: 45px; padding-bottom: 45px;}
 }

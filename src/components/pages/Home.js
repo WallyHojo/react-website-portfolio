@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import { Link, Element } from 'react-scroll';
-//import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 import '../../App.css';
 import './Home.css';
@@ -29,7 +28,9 @@ function Home() {
 
   // Function to update the window height state
   const handleResize = () => {
-    setWindowHeight(window.innerHeight);
+    if (window.innerWidth > 1280) { // Adjust the breakpoint as needed
+      setWindowHeight(window.innerHeight);
+    }
   };
   
   useEffect(() => {
@@ -49,18 +50,18 @@ function Home() {
             <Element id='welcome-section' className='position-relative' style={{height:`${windowHeight}px`, paddingTop: headerHeight, paddingBottom: headerHeight}}>
               <Welcome />
             </Element>
-            <Element id='about-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`}}>
+            <Element id='about-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`, paddingTop: headerHeight}}>
               <About />
             </Element>  
-            <Element id='skills-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`}}>
+            <Element id='skills-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`, paddingTop: headerHeight}}>
               <Skills />
             </Element>
-            <Element id='work-section' className='position-relative' style={{height:`${windowHeight}px`, paddingBottom: headerHeight}}>
+            <Element id='work-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`, paddingTop: headerHeight}}>
               <Work />
             </Element>
             <div className='bg top-gradient position-absolute top-0 start-0'></div>
           </section>
-          <Element id='contact-section' className='position-relative' style={{height:`${windowHeight}px`, paddingBottom: headerHeight}}>
+          <Element id='contact-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`, paddingTop: headerHeight}}>
             <Contact />
           </Element>    
           <div className={`social position-fixed flex-column top-50 ${isScrolled ? 'social-scrolled' : ''} ${isHeaderVisible ? 'animate__animated animate__fadeInLeftBig' : 'animate__animated animate__slow animate__fadeOutLeftBig'} d-none d-sm-block`}>

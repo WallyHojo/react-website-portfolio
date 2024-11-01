@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import './Footer.css';
 import logo from '../assets/images/logo.webp';
 
