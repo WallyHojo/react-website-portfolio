@@ -34,12 +34,27 @@ a.scroll {cursor: pointer;}
 .tags {left: 15px; font-family: "La Belle Aurore", cursive; font-weight: 400; font-style: normal; opacity: 0.6; color: var(--nav-not-scrolled-active);}
 .bottom-tags {bottom: 10px;}
 
+.dots-container {height: initial;}
+.dots-container .dot-wrapper:not(:last-child) {margin-bottom: 15px;}
+a.dot {position: relative; width: clamp(20px, 2vw, 30px); height: clamp(20px, 2vw, 30px); text-decoration: none; cursor: pointer;}
+a.dot::before {content: ''; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; transform: translate(-50%, -50%); box-shadow: inset 0 0 0 10px var(--white); border-radius: 50%; transition: box-shadow 0.3s ease-in;}
+a.dot.active::before {box-shadow: inset 0 0 0 10px transparent, 0 0 10px clamp(3px, 2vw, 5px) var(--hover);}
+a.dot:hover::before {box-shadow: inset 0 0 0 10px var(--hover);}
+
+.tooltip {top: 50%; right: clamp(20px, 2vw, 30px); transform: translateY(-50%); animation-iteration-count: 1; animation-timing-function: ease-in;}
+
 .hide {visibility: hidden; opacity: 0;}
 
 /* Media Queries */
 
 @media screen and (max-width: 991px) {
     main > div[id*="-section"] [class*="container"] {max-width: initial; height: 100%;}
+
+    .tooltip {animation-name: fadeInOpacityTablet; animation-duration: 1.5s;}
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip {animation-name: fadeInOpacityDesktop; animation-duration: 0.5s; opacity: 1;}    
 }
 
 @media only screen and (max-width: 1279px) and (orientation: portrait) {
@@ -49,4 +64,25 @@ a.scroll {cursor: pointer;}
 @media only screen and (max-width: 1280px) and (orientation: landscape) {
     main div[id*="-section"] {height: initial !important;}
     div[class*="-container"] {padding-top: 45px; padding-bottom: 45px;}
+}
+
+@keyframes fadeInOpacityDesktop {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInOpacityTablet {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}    
 }
