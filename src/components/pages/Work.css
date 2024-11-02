@@ -27,6 +27,8 @@ h5.modal-title {font-size: clamp(0.875rem, 3vw, 1.25rem);}
 
 .modal-open {overflow: hidden; /* Hide scrollbars */}
 
+.modal-scroll {left: -30px; bottom: initial; transform: rotate(90deg);}
+
 .fade-in {opacity: 1;}
 .fade-out {opacity: 0;}
 

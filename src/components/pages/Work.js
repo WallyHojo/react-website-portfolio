@@ -91,7 +91,7 @@ function Work() {
     }
   };
 
-  const [modalData, setModalData] = useState({ id: '', title: '', thumb: '', url: [] });
+  const [modalData, setModalData] = useState({ id: '', title: '', info: '', thumb: '', url: [] });
   const [showModal, setShowModal] = useState(false);
   const [fadeIn, setFadeIn] = useState(false); // For custom fade-in
 
@@ -99,6 +99,20 @@ function Work() {
     {
       id: 1,
       title: 'Enhanced Leads',
+      info: `<h4>Product Overview: Enhanced Leads</h4>
+      <p><strong>Introduction:</strong> Enhanced Leads is an innovative tool designed to streamline the process of calculating trade-in values and estimating payments for new or used vehicles. This user-friendly platform not only engages customers effectively but also ensures that dealerships receive high-quality leads, enhancing their sales potential.</p>
+      <p><strong>Key Features:</strong></p>
+      <ol><li><p><strong>Trade-In Value Calculator:</strong>
+      Users can easily input their vehicle details—make, model, year, mileage, and condition—to receive an accurate estimate of their trade-in value. This feature empowers users with valuable information and encourages them to explore their options.</p></li><li><p><strong>Payment Estimator:</strong>
+      After users select their desired vehicle, Enhanced Leads provides an intuitive payment calculator. By entering down payment amounts, loan terms, and interest rates, users can see potential monthly payments, helping them make informed decisions.</p></li><li><p><strong>Lead Generation:</strong>
+      Enhanced Leads captures user information through a seamless interface, ensuring that dealerships receive qualified leads. This feature includes options for users to schedule test drives or receive follow-up communications, further facilitating engagement.</p></li><li><p><strong>Visual Design:</strong>
+      Created with attention to detail in Photoshop, Enhanced Leads boasts a modern and appealing aesthetic. The design emphasizes usability, with clear navigation and visually engaging elements that enhance the user experience.</p></li><li><p><strong>Prototyping with Adobe XD:</strong>
+      The prototyping phase in Adobe XD allowed for extensive testing and refinement of the user interface. This iterative process ensured that the final product is not only functional but also intuitive, making it easy for users to navigate through the trade-in and payment estimation process.</p></li></ol>
+      <p><strong>Benefits for Dealerships:</strong></p>
+      <ul><li><p><strong>Quality Leads:</strong> Enhanced Leads filters and qualifies potential buyers, ensuring dealerships receive serious inquiries from users genuinely interested in trading in their vehicles.</p></li><li><p><strong>Increased Engagement:</strong> By providing valuable tools for customers, dealerships can enhance their online presence and attract more visitors to their websites, ultimately leading to higher conversion rates.</p></li><li><p><strong>Streamlined Process:</strong> The user-friendly interface reduces friction in the vehicle trade-in and purchasing process, allowing dealerships to focus on closing deals rather than chasing leads.</p></li></ul>
+      <p><strong>Conclusion:</strong>
+Enhanced Leads is more than just a calculator; it’s a comprehensive tool designed to engage users while delivering high-quality leads to dealerships. With a focus on user experience and an attractive design, Enhanced Leads transforms the vehicle trading and purchasing process into a seamless journey for both customers and dealerships.</p>
+      `,
       thumb: [enhancedLeadsThumb],
       urls: [
         [enhancedLeads1],
@@ -210,10 +224,10 @@ function Work() {
     },                            
   ];
 
-  const handleImageClick = (id, title) => {
+  const handleImageClick = (id, title, info) => {
     const selectedImage = images.find(image => image.id === id);
     if (selectedImage) {
-      setModalData({ id, title, urls: selectedImage.urls });
+      setModalData({ id, title, info, urls: selectedImage.urls });
       setShowModal(true);
       document.body.classList.add('modal-open');
     }
@@ -279,10 +293,10 @@ function Work() {
               <img
                 key={image.id}
                 src={image.thumb}
-                alt={image.title}
+                alt={`${(image.title.toLowerCase())} thumb`}
                 className='img-fluid'
                 style={{ width: '100%', cursor: 'pointer' }}
-                onClick={() => handleImageClick(image.id, image.title)}
+                onClick={() => handleImageClick(image.id, image.title, image.info)}
               />
             ))}                
           </Carousel>
@@ -307,13 +321,26 @@ function Work() {
                 </button>
               </div>
               <div className="modal-body position-relative">
-              <Carousel responsive={modal} className='modal-slider'>
-                {modalData.urls.map((url, index) => (
-                  <div key={index}>
-                    <img src={url} className='mx-auto d-block rounded-3' alt={`Image ${modalData.id} - ${index + 1}`} />
+                <Carousel responsive={modal} className='modal-slider'>
+                  {modalData.urls.map((url, index) => (
+                    <div key={index}>
+                      <img src={url} className='mx-auto d-block rounded-3' alt={`Image ${modalData.id} - ${index + 1}`} />
+                    </div>
+                  ))}
+                </Carousel>
+                <div className='row'>
+                  <div className='col col-md-10 offset-md-1'>
+                    <div dangerouslySetInnerHTML={{ __html: modalData.info }} />
                   </div>
-                ))}
-              </Carousel>
+                </div>
+
+                <div className='modal-scroll position-absolute top-50 text-uppercase'>
+                  <small>scroll down</small> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='bi bi-arrow-right' viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </div>
+
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary btn-lg" onClick={handleCloseModal}>

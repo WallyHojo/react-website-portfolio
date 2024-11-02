@@ -15,11 +15,6 @@ function Home() {
 
   // From Theme.js
   const { headerHeight, isScrolled, isHeaderVisible } = useContext(ThemeContext); //header height hook
-  
-  // Function to handle the activation of a link.
-  const handleSetActive = (to) => {
-    console.log(to);
-  };
 
   /*
   Setting window height to each section
@@ -99,19 +94,20 @@ function Home() {
             <div><a className='position-relative d-inline-block text-center' href='https://drive.google.com/file/d/1PBk4mVGJZaBAwNw8WxZvjIBzykWPtCNs/view?usp=drive_link' target='_blank' rel='noopener noreferrer'><svg width="25px" height="100%" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path d="M360-460h40v-80h40q17 0 28.5-11.5T480-580v-40q0-17-11.5-28.5T440-660h-80v200Zm40-120v-40h40v40h-40Zm120 120h80q17 0 28.5-11.5T640-500v-120q0-17-11.5-28.5T600-660h-80v200Zm40-40v-120h40v120h-40Zm120 40h40v-80h40v-40h-40v-40h40v-40h-80v200ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></a></div>            
           </div>
 
-          <div className={`scroll position-fixed flex-column text-uppercase ${isScrolled ? 'hide' : ''}`}>
-            <small>scroll down</small> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='bi bi-arrow-right' viewBox="0 0 16 16">
-              <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-            </svg>
+          <div className='scroll position-fixed flex-column text-uppercase'>
+            <Link to="about-section" className={`position-absolute end-0 d-block ${isScrolled ? 'fade-out' : 'fade-in'} p-2`}>
+              <small>scroll down</small> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='bi bi-arrow-right' viewBox="0 0 16 16">
+                <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+              </svg>
+            </Link>
+            <Link to="main" className={`position-absolute end-0 d-block ${isScrolled ? 'fade-in' : 'fade-out'} p-2`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='bi bi-arrow-left' viewBox="0 0 16 16">
+                <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>    
+              <small>to the top</small>
+            </Link>            
           </div>
-
-          <Link to="welcome-section" spy={true} smooth={true} duration={500} activeClass="active" className={`scroll position-fixed flex-column text-uppercase ${isScrolled ? '' : 'hide'}`} onSetActive={handleSetActive}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='bi bi-arrow-left' viewBox="0 0 16 16">
-              <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-            </svg>    
-            <small>to the top</small>
-          </Link>
 
           <div className='dots-container position-fixed d-flex flex-column top-50 end-0 translate-middle-y pe-2 z-1'>
             {sectionIDs.map(({ id, label }, index) => (

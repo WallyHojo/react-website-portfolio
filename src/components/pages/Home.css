@@ -25,8 +25,9 @@ main div[id*="-section"] {overflow: hidden;}
 .social svg {fill: var(--hover); transition: fill 0.2s ease-in;}
 .social a:hover svg {fill: var(--white);}
 
-.scroll {right: -45px; bottom: 80px; z-index: 2; width: 135px; text-align: right; text-decoration: none; font-size: 14px; letter-spacing: 2px; line-height: 1; color: inherit; transform: rotate(90deg); opacity: 1; transition: opacity 0.3s ease-in;}
-a.scroll {cursor: pointer;}
+.scroll {right: -80px; bottom: 95px; z-index: 2; width: 165px; text-align: right; font-size: 14px; letter-spacing: 3px; transform: rotate(90deg); opacity: 1; transition: opacity 0.3s ease-in;}
+.scroll a {text-decoration: none; color: inherit; transition: opacity 0.3s ease-in; cursor: pointer; }
+.scroll a.fade-out {z-index: -1;}
 
 .page {left: 15px; bottom: 35px;}
 .page .number::after {content: "0" attr(data-id); font-size: clamp(40px, 10vw, 150px); font-weight: 800; line-height: 1; text-decoration: underline; opacity: 0.1;}
