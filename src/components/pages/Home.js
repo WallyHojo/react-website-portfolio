@@ -44,7 +44,7 @@ function Home() {
     { id: 'contact-section', label: 'contact' }
   ];
 
-  const [tooltip, setTooltip] = useState({ label: '', visible: false, position: {} });
+  const [tooltip, setTooltip] = useState({ label: '', visible: false });
   
   useEffect(() => {
     // Add event listener on mount
