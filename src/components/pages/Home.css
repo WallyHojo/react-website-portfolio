@@ -39,7 +39,6 @@ a.scroll {cursor: pointer;}
 a.dot {position: relative; width: clamp(20px, 2vw, 30px); height: clamp(20px, 2vw, 30px); text-decoration: none; cursor: pointer;}
 a.dot::before {content: ''; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; transform: translate(-50%, -50%); box-shadow: inset 0 0 0 10px var(--white); border-radius: 50%; transition: box-shadow 0.3s ease-in;}
 a.dot.active::before {box-shadow: inset 0 0 0 10px transparent, 0 0 10px clamp(3px, 2vw, 5px) var(--hover);}
-a.dot:hover::before {box-shadow: inset 0 0 0 10px var(--hover);}
 
 .tooltip {top: 50%; right: clamp(20px, 2vw, 30px); transform: translateY(-50%); animation-iteration-count: 1; animation-timing-function: ease-in;}
 
