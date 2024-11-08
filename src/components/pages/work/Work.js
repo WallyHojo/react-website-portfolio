@@ -337,6 +337,7 @@ Enhanced Leads is more than just a calculator; it’s a comprehensive tool desig
                     ))}
                   </Carousel>
 
+                  {modalData?.info ? (
                   <div className='modal-scroll scroll d-none d-lg-block position-absolute top-50 text-uppercase'>
                   <Link className='position-absolute end-0 d-block py-2'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='bi bi-arrow-left' viewBox="0 0 16 16">
@@ -344,9 +345,10 @@ Enhanced Leads is more than just a calculator; it’s a comprehensive tool desig
                     </svg>                  
                     <small>scroll down</small> 
                   </Link>           
-                  </div>                  
+                  </div>   
+                  ) : null}               
                 </div>
-
+                
                 <div className='row'>
                   <div className='col col-md-10 offset-md-1'>
                     <div dangerouslySetInnerHTML={{ __html: modalData.info }} />

@@ -175,7 +175,7 @@ export const ThemeProvider = ({ children }) => {
   };  
 
   return (
-    <ThemeContext.Provider value={{ TrackVisibility, Link, Element, headerHeight, refHeaderHeight, isNavExpanded, isScrolled, isHeaderVisible, windowHeight, sectionIDs, tooltip, handleMouseEnter, handleMouseLeave, TitleWithSpans }}>
+    <ThemeContext.Provider value={{ TrackVisibility, Link, Element, headerHeight, refHeaderHeight, isNavExpanded, setNavIsExpanded, toggleNavExpansion, toggleButtonRef, handleNavClick, isScrolled, isHeaderVisible, windowHeight, sectionIDs, tooltip, handleMouseEnter, handleMouseLeave, TitleWithSpans }}>
       {children}
     </ThemeContext.Provider>
   );  

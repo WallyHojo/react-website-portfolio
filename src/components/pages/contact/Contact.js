@@ -90,7 +90,7 @@ function Contact() {
             {({isVisible}) =>  
               <div className={isVisible ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'}>
                 <h3 className='mb-2'>Get in Touch</h3>
-                <p className='lead'>I’d love to hear from you! Whether you have a question or just want to say hello, feel free to reach out. Please fill out the form below, and I’ll get back to you as soon as possible.</p>
+                <p className='lead'>I'd love to hear from you! Whether you have a question or just want to say hello, feel free to reach out. Please fill out the form below, and I'll get back to you as soon as possible.</p>
               </div>
             }
           </TrackVisibility>  

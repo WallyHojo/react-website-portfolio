@@ -68,7 +68,7 @@ function Default() {
           <div className='dots-container position-fixed d-flex flex-column top-50 end-0 translate-middle-y pe-2 z-1'>
             {sectionIDs.map(({ id, label }, index) => (
               <div key={index} className='dot-wrapper position-relative'>
-                <Link className='dot d-block' to={id} spy={true} smooth={true} duration={500} onMouseEnter={(event) => handleMouseEnter(event, label)} onMouseLeave={handleMouseLeave}></Link>
+                <Link className='dot d-block' to={id} spy={true} smooth={true} offset={-100} duration={500} onMouseEnter={(event) => handleMouseEnter(event, label)} onMouseLeave={handleMouseLeave}></Link>
                 {tooltip.visible && tooltip.label === label && (
                   <div className='tooltip position-absolute z-n1'>
                     {tooltip.label}
