@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-website-portfolio/static/css/main.9b71a5f2.css",
-    "main.js": "/react-website-portfolio/static/js/main.e576eece.js",
+    "main.css": "/react-website-portfolio/static/css/main.c4d3c217.css",
+    "main.js": "/react-website-portfolio/static/js/main.448e5ce0.js",
     "static/media/static_img.webp": "/react-website-portfolio/static/media/static_img.5dc72e0b3e6b2d00600b.webp",
     "static/media/tablet_img.webp": "/react-website-portfolio/static/media/tablet_img.1d669585dd6f97c48901.webp",
-    "static/media/devices_img.webp": "/react-website-portfolio/static/media/devices_img.88552feff672f09b7ce1.webp",
+    "static/media/devices_img.webp": "/react-website-portfolio/static/media/devices_img.d263eb47c54fb7c16b29.webp",
     "static/media/portrait.webp": "/react-website-portfolio/static/media/portrait.7acc1abe4c8a0490b07c.webp",
     "static/media/mobile_img.webp": "/react-website-portfolio/static/media/mobile_img.6b932fef6b5e1e03af75.webp",
     "static/media/pfp.webp": "/react-website-portfolio/static/media/pfp.9f1e71c4376c8d35c1dd.webp",
@@ -18,11 +18,11 @@
     "static/media/revicons.ttf": "/react-website-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/react-website-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/react-website-portfolio/index.html",
-    "main.9b71a5f2.css.map": "/react-website-portfolio/static/css/main.9b71a5f2.css.map",
-    "main.e576eece.js.map": "/react-website-portfolio/static/js/main.e576eece.js.map"
+    "main.c4d3c217.css.map": "/react-website-portfolio/static/css/main.c4d3c217.css.map",
+    "main.448e5ce0.js.map": "/react-website-portfolio/static/js/main.448e5ce0.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b71a5f2.css",
-    "static/js/main.e576eece.js"
+    "static/css/main.c4d3c217.css",
+    "static/js/main.448e5ce0.js"
   ]
 }
