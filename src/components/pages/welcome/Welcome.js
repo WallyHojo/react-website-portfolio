@@ -1,31 +1,13 @@
 import React from 'react';
-import TrackVisibility from 'react-on-screen';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
 import './Welcome.css';
-import pfp from '../../assets/images/pfp.webp';
+import pfp from '../../../assets/images/pfp.webp';
+import { ThemeContext } from '../../../Theme';
 
 function Welcome() {
 
-  /*
-  Title with characters wrapped in span tags
-  */
-  const TitleWithSpans = ({ title, tag }) => {
-    // Determine the correct tag to use
-    const Tag = tag;
-
-    return (
-      <Tag>
-        {title.split('').map((char, index) => (
-          <span key={index}>{char}</span>
-        ))}
-      </Tag>
-    );
-  };
-  
-  TitleWithSpans.propTypes = {
-    title: PropTypes.string.isRequired,
-    tag: PropTypes.oneOf(['h1', 'h3', 'h4']).isRequired,
-  };
+  // From Theme.js
+  const { TrackVisibility, TitleWithSpans } = useContext(ThemeContext); //header height hook
 
   return (
     <>
@@ -55,12 +37,12 @@ function Welcome() {
           </TrackVisibility>
         </div>
         <div className='welcome-avatar position-relative text-center'>
-          <TrackVisibility partialVisibility>
+          <TrackVisibility offset={300}>
               {({isVisible}) =>
               <img src={pfp} className={`avatar top-50 ${isVisible ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeOut'}`} alt='profile' />
               }
           </TrackVisibility>
-          <TrackVisibility partialVisibility>
+          <TrackVisibility offset={300}>
               {({isVisible}) =>
               <img src={pfp} className={`avatar-reflect position-absolute top-50 z-n1 ${isVisible ? 'animate__animated animate__fadeIn animate__slower' : 'animate__animated animate__fadeOut animate__slower'}`} alt='profile' />
               }

@@ -1,10 +1,13 @@
 import React from 'react';
-import TrackVisibility from 'react-on-screen';
+import { useContext } from 'react';
 import './About.css';
-import portrait from '../../assets/images/portrait.webp';
-import portraitBlur from '../../assets/images/portrait.webp';
+import portrait from '../../../assets/images/portrait.webp';
+import portraitBlur from '../../../assets/images/portrait.webp';
+import { ThemeContext } from '../../../Theme';
 
 function About() {
+
+  const { TrackVisibility } = useContext(ThemeContext); //header ref hook
 
   return (
     <>

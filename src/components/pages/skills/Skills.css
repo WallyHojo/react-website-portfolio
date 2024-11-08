@@ -1,0 +1,31 @@
+:root {
+    --c-progress-bar-size: 140px;
+    --c-progress-bar-stroke-width: 6
+}
+
+.skills-container {background: linear-gradient(135deg, rgb(36 94 138) 0%, rgb(26 48 87 / 0%) 30%, rgb(29 37 101 / 10%) 70%, rgb(63 39 139) 100%); box-shadow: -40px 20px 20px 0 rgb(0 0 0 / 10%);}
+.skills-container::after {content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgb(44 116 171) 0%, rgba(255, 255, 255, 0) clamp(5%, 10vw, 12%)), linear-gradient(145deg, rgba(255, 255, 255, 0) 75%, rgb(80 49 177) 100%); padding: clamp(1px, 0.3vw, 2px); mask: linear-gradient(#000 0 0) exclude, linear-gradient(#000 0 0) content-box;} 
+
+.c-progress-bar {width: var(--c-progress-bar-size);}
+.progress-pie_shape {width: 100%; position: relative;}
+.progress-pie_shape svg {display: block; width: var(--c-progress-bar-size); height: var(--c-progress-bar-size); stroke-width: var(--c-progress-bar-stroke-width);}
+.progress-pie_bg {stroke: currentColor; opacity: .125;}
+.progress-pie_fill {stroke: currentColor;}
+.progress-pie_value {position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
+.progress-pie_value i {font-size: .65em;}
+.c-progress-bar .progress-pie_fill, .c-progress-bar .progress-pie_value {visibility: hidden;}
+
+.skill h5 {font-size: clamp(14px, 4vw, 20px);}
+.skill svg {max-height: clamp(100px, 10vw, 140px);}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+    .skills-container {flex-direction: column; justify-content: space-between;}
+}
+@media screen and (min-width: 768px) {
+    .skills-container p {line-height: 1.8;}
+}
+@media screen and (min-width: 1680px) {
+    .skills-container, .skills-container::after {border-radius: 15% 0 15% 0 / clamp(0%, 12vw, 25%) 0 clamp(0%, 15vw, 25%) 0;} 
+}

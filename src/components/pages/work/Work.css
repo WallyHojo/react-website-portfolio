@@ -1,6 +1,5 @@
-.work-container {background: linear-gradient(135deg,  rgba(63,39,139,1) 0%,rgba(29,37,101,0.1) 30%,rgba(26,48,87,0.1) 71%,rgba(36,94,138,0.5) 100%); box-shadow: -40px 20px 20px 0 rgb(0 0 0 / 10%);}
-.work-container::before {content: ''; position: absolute; background: linear-gradient(to right,  rgba(94,82,177,0) 0%,rgba(94,82,177,1) 25%,rgba(255,255,255,0) 70%);
-    left: 0; top: 0; width: 50%; height: 2px;}
+.work-container {background: linear-gradient(135deg,  rgba(63,39,139,1) 0%,rgba(29,37,101,0.1) 30%,rgba(26,48,87,0.1) 70%,rgba(36,94,138,0.5) 100%); box-shadow: -40px 20px 20px 0 rgb(0 0 0 / 10%);}
+.work-container::after {content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(80, 49, 177, 1) 0%, rgba(255, 255, 255, 0) clamp(5%, 10vw, 12%)); padding: clamp(1px, 0.3vw, 2px); mask: linear-gradient(#000 0 0) exclude, linear-gradient(#000 0 0) content-box;}
 
 /* Slider */
 .work-slider li {position: relative; padding: 7.5px;}
@@ -19,15 +18,22 @@
 .modal-header button {background-color: transparent; line-height: 1; border: none;}
 h5.modal-title {font-size: clamp(0.875rem, 3vw, 1.25rem);}
 .modal-content {background-color: rgb(17 17 17 / 90%);}
-.modal-slider, .modal-slider ul {height: 100%;}
-.modal-slider div {display: flex; justify-content: center; align-items: center; height: 100%;}
+/*.modal-slider, .modal-slider ul {height: 100%;}*/
+.modal-slider div {display: flex; justify-content: center; align-items: center; /*height: 100%;*/}
 .modal-slider img {width: 100%; max-width: fit-content; max-height: -webkit-fill-available;}
 .modal-header, .modal-footer {border-color: #222;}
 .modal-footer button {background-color: var(--nav-scrolled); border: none;}
 
 .modal-open {overflow: hidden; /* Hide scrollbars */}
 
-.modal-scroll {left: -30px; bottom: initial; transform: rotate(90deg);}
+.modal-scroll {left: -15px; right: initial; bottom: initial; transform: rotate(-90deg) translate(-50%,-50%);}
+.modal-scroll svg {animation: fadeInDown 2s infinite;}
+
+@keyframes fadeInDown {
+    0%   {transform: translateX(0%);}
+    50%  {transform: translateX(50%); opacity: 0;}
+    100% {transform: translateX(0%);}
+}
 
 .fade-in {opacity: 1;}
 .fade-out {opacity: 0;}
@@ -35,6 +41,5 @@ h5.modal-title {font-size: clamp(0.875rem, 3vw, 1.25rem);}
 /* Media Queries */
 
 @media screen and (min-width: 1680px) {
-    .work-container {border-radius: 15% 0 0 0 / clamp(0%, 12vw, 25%) 0 0 0 !important; border-style: solid; border-width: 0 0 0 2px; border-color: transparent transparent transparent rgba(94, 82, 177, 0.75);}
-    .work-container::before {background: linear-gradient(to right, rgba(255, 255, 255, 0) 30%, rgba(94, 82, 177, 1) 50%, rgba(255, 255, 255, 0) 80%);}
+    .work-container, .work-container::after {border-radius: 15% 0 0 0 / clamp(0%, 12vw, 25%) 0 0 0;}
 }

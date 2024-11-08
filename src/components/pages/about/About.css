@@ -1,0 +1,18 @@
+.about-container {background: linear-gradient(135deg, rgba(63, 39, 139) 0%, rgba(55, 56, 139, 0) 30%, rgba(44, 78, 138, 0) 80%, rgba(36, 94, 138, 0.5) 100%);}
+.about-container::after {content: ''; position: absolute; inset: 0; background: linear-gradient(145deg, rgba(80, 49, 177) 0%, rgba(255, 255, 255, 0) clamp(15%, 25vw, 25%)), linear-gradient(20deg, rgba(255, 255, 255, 0) 95%, rgba(80, 49, 177) 100%); padding: clamp(1px, 0.3vw, 2px); border-radius: 0 15% 0 0 / 0 clamp(0%, 12vw, 25%) 0 0; mask: linear-gradient(#000 0 0) exclude, linear-gradient(#000 0 0) content-box;}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+  .about-img img {opacity: 0.25;}
+}
+@media screen and (max-width: 575px) {
+  .about-img {right: -75%; bottom: 0;}
+}
+@media screen and (min-width: 576px) {
+  .about-img {right: -25%; bottom: 0;}
+  .about-img-blur {filter: blur(10px); transform: translate(-10px, -10px); opacity: 0.8;}
+}
+@media screen and (min-width: 1200px) {
+  .about-img {right: 0; bottom: 0;}
+}

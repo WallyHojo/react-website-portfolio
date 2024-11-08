@@ -1,10 +1,12 @@
 import React from 'react';
-import { useRef, useState } from 'react';
-import TrackVisibility from 'react-on-screen';
+import { useRef, useState, useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import { ThemeContext } from '../../../Theme';
 
 function Contact() {
+
+  const { TrackVisibility } = useContext(ThemeContext); //header ref hook
 
   const form = useRef();
 

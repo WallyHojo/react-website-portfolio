@@ -1,69 +1,25 @@
 import React from 'react';
-import { useState, useEffect, useContext } from 'react';
-import { Link, Element } from 'react-scroll';
+import { useContext } from 'react';
 import 'animate.css';
 import '../../App.css';
-import './Home.css';
-import Welcome from '../pages/Welcome';
-import About from '../pages/About';
-import Skills from '../pages/Skills';
-import Work from '../pages/Work';
-import Contact from '../pages/Contact';
+import './Default.css';
+import Welcome from './welcome/Welcome';
+import About from './about/About';
+import Skills from './skills/Skills';
+import Work from './work/Work';
+import Contact from './contact/Contact';
 import { ThemeContext } from '../../Theme';
 
-function Home() { 
+function Default() { 
 
   // From Theme.js
-  const { headerHeight, isScrolled, isHeaderVisible } = useContext(ThemeContext); //header height hook
-
-  /*
-  Setting window height to each section
-  */
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
-  // Function to update the window height state
-  const handleResize = () => {
-    if (window.innerWidth > 1280) { // Adjust the breakpoint as needed
-      setWindowHeight(window.innerHeight);
-    }
-  };
-
-  /*
-  Array of sections show dots
-  */
-  const sectionIDs = [
-    { id: 'welcome-section', label: 'welcome' },
-    { id: 'about-section', label: 'about' },
-    { id: 'skills-section', label: 'skills' },
-    { id: 'work-section', label: 'work' },
-    { id: 'contact-section', label: 'contact' }
-  ];
-
-  const [tooltip, setTooltip] = useState({ label: '', visible: false });
-  
-  useEffect(() => {
-    // Add event listener on mount
-    window.addEventListener('resize', handleResize);
-
-    // Remove event listener on unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); // Empty dependency array means this effect runs only once
-
-  const handleMouseEnter = (event, label) => {
-    setTooltip({ label, visible: true });
-  };
-
-  const handleMouseLeave = () => {
-    setTooltip({ ...tooltip, visible: false });
-  };
+  const { Link, Element, headerHeight, isScrolled, isHeaderVisible, windowHeight, sectionIDs, tooltip, handleMouseEnter, handleMouseLeave } = useContext(ThemeContext); //header height hook
 
   return (
       <>
         <main id='main' className='position-relative' role='main'>
 
-          <section className='rounded-bottom position-relative'>
+          <div className='rounded-container rounded-bottom position-relative'>
             <Element id='welcome-section' className='position-relative' style={{height:`${windowHeight}px`, paddingTop: headerHeight, paddingBottom: headerHeight}}>
               <Welcome />
             </Element>
@@ -81,7 +37,7 @@ function Home() {
             </Element>
 
             <div className='bg top-gradient position-absolute top-0 start-0'></div>
-          </section>
+          </div>
 
           <Element id='contact-section' className='position-relative d-flex flex-column' style={{height:`${windowHeight}px`, paddingTop: headerHeight}}>
             <Contact />
@@ -128,4 +84,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Default;

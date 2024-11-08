@@ -1,4 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import TrackVisibility from 'react-on-screen';
+import { Link, Element } from 'react-scroll';
 import { createContext, useRef, useEffect, useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
@@ -69,6 +72,30 @@ export const ThemeProvider = ({ children }) => {
   }, [headerHeight]);
 
   /*
+  Header expanded
+  */
+  // Function to indicate whether navigation is expanded
+  const [isNavExpanded, setNavIsExpanded] = useState(false);
+
+
+  const toggleNavExpansion = () => {
+    setNavIsExpanded((prev) => !prev);
+    setNavIsExpanded(!isNavExpanded); // Toggles the expanded state
+  };  
+
+  /*
+  Nav toggle click
+  */
+  const toggleButtonRef = useRef(null); // Reference to the navbar toggler button
+
+  const handleNavClick = () => {
+    if (isNavExpanded) {
+      // If the navbar is expanded, simulate a click on the toggle button
+      toggleButtonRef.current.click();
+    }
+  };  
+
+  /*
   Scroll to section
   */
   const scrollToTop = () => {
@@ -83,8 +110,72 @@ export const ThemeProvider = ({ children }) => {
     });  
   };
 
+  /*
+  Setting window height to each section
+  */
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  // Function to update the window height state
+  const handleResize = () => {
+    if (window.innerWidth > 1280) { // Adjust the breakpoint as needed
+      setWindowHeight(window.innerHeight);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener on mount
+    window.addEventListener('resize', handleResize);
+
+    // Remove event listener on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty dependency array means this effect runs only once   
+  
+  /*
+  Array of sections show dots
+  */
+  const sectionIDs = [
+    { id: 'welcome-section', label: 'welcome' },
+    { id: 'about-section', label: 'about' },
+    { id: 'skills-section', label: 'skills' },
+    { id: 'work-section', label: 'work' },
+    { id: 'contact-section', label: 'contact' }
+  ];
+
+  const [tooltip, setTooltip] = useState({ label: '', visible: false });
+
+  const handleMouseEnter = (event, label) => {
+    setTooltip({ label, visible: true });
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ ...tooltip, visible: false });
+  };  
+
+  /*
+  Title with characters wrapped in span tags
+  */
+  const TitleWithSpans = ({ title, tag }) => {
+    // Determine the correct tag to use
+    const Tag = tag;
+
+    return (
+      <Tag>
+        {title.split('').map((char, index) => (
+          <span key={index}>{char}</span>
+        ))}
+      </Tag>
+    );
+  };
+  
+  TitleWithSpans.propTypes = {
+    title: PropTypes.string.isRequired,
+    tag: PropTypes.oneOf(['h1', 'h3', 'h4']).isRequired,
+  };  
+
   return (
-    <ThemeContext.Provider value={{ headerHeight, setHeaderHeight, refHeaderHeight, scrollToSection, isScrolled, scrollToTop, isHeaderVisible }}>
+    <ThemeContext.Provider value={{ TrackVisibility, Link, Element, headerHeight, refHeaderHeight, isNavExpanded, isScrolled, isHeaderVisible, windowHeight, sectionIDs, tooltip, handleMouseEnter, handleMouseLeave, TitleWithSpans }}>
       {children}
     </ThemeContext.Provider>
   );  

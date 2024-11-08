@@ -1,10 +1,13 @@
 import React from 'react';
-import TrackVisibility from 'react-on-screen';
+import { useContext } from 'react';
 import Carousel from 'react-multi-carousel';
 import './Skills.css';
 import 'react-multi-carousel/lib/styles.css';
+import { ThemeContext } from '../../../Theme';
 
 function Skills() {
+
+  const { TrackVisibility } = useContext(ThemeContext); //header ref hook
 
   const responsive = {
     superLargeDesktop: {

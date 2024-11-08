@@ -1,4 +1,5 @@
 main div[id*="-section"] {overflow: hidden;}
+.rounded-container::after {content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255, 255, 255, 0) 95%, rgb(44 116 171) 100%); padding: clamp(1px, 0.4vw, 2px); border-radius: 0 0 15% 0 / 0 0 clamp(0%, 12vw, 25%) 0; mask: linear-gradient(#000 0 0) exclude, linear-gradient(#000 0 0) content-box;}
 .rounded-top {border-radius: 0 15% 0 0 / 0 clamp(0%, 12vw, 25%) 0 0 !important; box-shadow: 0 -10px 20px 0 rgb(0 0 0 / 10%); overflow: hidden;}
 .rounded-bottom {border-radius: 0 0 15% 0 / 0 0 clamp(0%, 12vw, 25%) 0 !important; box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%); overflow: hidden;}
 .top-gradient {background: linear-gradient(62deg, rgb(36, 94, 138) 0.00%, rgb(26, 48, 87) 29.99%, rgb(29, 37, 101) 70.01%, rgb(63 39 139) 100.00%); /*background-size: 180% 180%;*/ z-index: -1; /*animation: grgradient-animationadient 5s ease infinite;*/}

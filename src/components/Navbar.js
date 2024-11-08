@@ -1,29 +1,12 @@
 import React from 'react';
-import { useContext, useState, useRef } from 'react';
-import { Link } from 'react-scroll';
+import { useContext } from 'react';
 import './Navbar.css';
 import { ThemeContext } from '../Theme';
 import logo from '../assets/images/logo.webp';
 
 function Navbar() {
 
-  const { refHeaderHeight, isScrolled, isHeaderVisible } = useContext(ThemeContext); //header ref hook
-
-  // Function to indicate whether navigation is expanded
-  const [isNavExpanded, setNavIsExpanded] = useState(false);
-  const toggleButtonRef = useRef(null); // Reference to the navbar toggler button
-
-  const toggleNavExpansion = () => {
-    setNavIsExpanded((prev) => !prev);
-    setNavIsExpanded(!isNavExpanded); // Toggles the expanded state
-  };  
-
-  const handleNavClick = () => {
-    if (isNavExpanded) {
-      // If the navbar is expanded, simulate a click on the toggle button
-      toggleButtonRef.current.click();
-    }
-  };  
+  const { Link, refHeaderHeight, isScrolled, isHeaderVisible, isNavExpanded, toggleNavExpansion, toggleButtonRef, handleNavClick } = useContext(ThemeContext); //header ref hook
 
   return (
     <>
@@ -52,7 +35,7 @@ function Navbar() {
                 <Link to="contact-section" spy={true} smooth={true} duration={500} className='nav-link text-uppercase' onClick={handleNavClick}>Contact</Link>
               </li>
               <li className='nav-item d-sm-none d-md-block'>
-                <a href='https://drive.google.com/file/d/1PBk4mVGJZaBAwNw8WxZvjIBzykWPtCNs/view?usp=drive_link' target='_blank' className='nav-link text-uppercase' onClick={handleNavClick}>Resume</a>
+                <a href='https://drive.google.com/file/d/1PBk4mVGJZaBAwNw8WxZvjIBzykWPtCNs/view?usp=drive_link' target='_blank' className='nav-link text-uppercase' onClick={handleNavClick} rel='noreferrer'>Resume</a>
               </li>              
             </ul>
           </div>
