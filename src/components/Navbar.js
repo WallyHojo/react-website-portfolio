@@ -35,7 +35,7 @@ function Navbar() {
                 <Link to="contact-section" spy={true} smooth={true} duration={500} className='nav-link text-uppercase' onClick={handleNavClick}>Contact</Link>
               </li>
               <li className='nav-item d-sm-none d-md-block'>
-                <a href='https://drive.google.com/file/d/1PBk4mVGJZaBAwNw8WxZvjIBzykWPtCNs/view?usp=drive_link' target='_blank' className='nav-link text-uppercase' onClick={handleNavClick} rel='noreferrer'>Resume</a>
+                <a href='https://drive.google.com/file/d/1K2KS4JusURTYkQvagbeCorw5WA2_ceL5/view?usp=sharing' target='_blank' className='nav-link text-uppercase' onClick={handleNavClick} rel='noreferrer'>Resume</a>
               </li>              
             </ul>
           </div>
