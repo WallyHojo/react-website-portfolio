@@ -55,6 +55,7 @@ function Contact() {
       firstName,
       lastName,
       email,
+      message,
     };
 
     emailjs.send('service_6wyqnpf', 'template_fpcny71', templateParams, 'XLYQ7l_ypaQaiyMdp')
