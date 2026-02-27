@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/react-website-portfolio/static/css/main.624ba0bd.css",
-    "main.js": "/react-website-portfolio/static/js/main.6bb51115.js",
-    "static/media/static_img.webp": "/react-website-portfolio/static/media/static_img.5dc72e0b3e6b2d00600b.webp",
-    "static/media/tablet_img.webp": "/react-website-portfolio/static/media/tablet_img.1d669585dd6f97c48901.webp",
-    "static/media/devices_img.webp": "/react-website-portfolio/static/media/devices_img.d263eb47c54fb7c16b29.webp",
-    "static/media/portrait.webp": "/react-website-portfolio/static/media/portrait.7acc1abe4c8a0490b07c.webp",
-    "static/media/mobile_img.webp": "/react-website-portfolio/static/media/mobile_img.6b932fef6b5e1e03af75.webp",
-    "static/media/pfp.webp": "/react-website-portfolio/static/media/pfp.9f1e71c4376c8d35c1dd.webp",
-    "static/media/expectations_img.webp": "/react-website-portfolio/static/media/expectations_img.446fb5e64840dd901187.webp",
-    "static/media/calculate-payments_img.webp": "/react-website-portfolio/static/media/calculate-payments_img.0a9176ca6f22a6d00ad8.webp",
-    "static/media/personal-info_img.webp": "/react-website-portfolio/static/media/personal-info_img.df50ff9f95d569d12d88.webp",
-    "static/media/calculate-trade-in_img.webp": "/react-website-portfolio/static/media/calculate-trade-in_img.71a62c55c3e57aa14f93.webp",
-    "static/media/thumb_img.webp": "/react-website-portfolio/static/media/thumb_img.17617c614d1abd66a2db.webp",
-    "static/media/logo.webp": "/react-website-portfolio/static/media/logo.3e5fd97eea50481cd65b.webp",
-    "static/media/revicons.eot": "/react-website-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/react-website-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/react-website-portfolio/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/react-website-portfolio/index.html",
-    "main.624ba0bd.css.map": "/react-website-portfolio/static/css/main.624ba0bd.css.map",
-    "main.6bb51115.js.map": "/react-website-portfolio/static/js/main.6bb51115.js.map"
+    "main.css": "/static/css/main.8b8c262f.css",
+    "main.js": "/static/js/main.8bfabc2b.js",
+    "static/media/static_img.webp": "/static/media/static_img.5dc72e0b3e6b2d00600b.webp",
+    "static/media/tablet_img.webp": "/static/media/tablet_img.1d669585dd6f97c48901.webp",
+    "static/media/devices_img.webp": "/static/media/devices_img.d263eb47c54fb7c16b29.webp",
+    "static/media/portrait.webp": "/static/media/portrait.7acc1abe4c8a0490b07c.webp",
+    "static/media/mobile_img.webp": "/static/media/mobile_img.6b932fef6b5e1e03af75.webp",
+    "static/media/pfp.webp": "/static/media/pfp.9f1e71c4376c8d35c1dd.webp",
+    "static/media/expectations_img.webp": "/static/media/expectations_img.446fb5e64840dd901187.webp",
+    "static/media/calculate-payments_img.webp": "/static/media/calculate-payments_img.0a9176ca6f22a6d00ad8.webp",
+    "static/media/personal-info_img.webp": "/static/media/personal-info_img.df50ff9f95d569d12d88.webp",
+    "static/media/calculate-trade-in_img.webp": "/static/media/calculate-trade-in_img.71a62c55c3e57aa14f93.webp",
+    "static/media/thumb_img.webp": "/static/media/thumb_img.17617c614d1abd66a2db.webp",
+    "static/media/logo.webp": "/static/media/logo.3e5fd97eea50481cd65b.webp",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.8b8c262f.css.map": "/static/css/main.8b8c262f.css.map",
+    "main.8bfabc2b.js.map": "/static/js/main.8bfabc2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.624ba0bd.css",
-    "static/js/main.6bb51115.js"
+    "static/css/main.8b8c262f.css",
+    "static/js/main.8bfabc2b.js"
   ]
 }
