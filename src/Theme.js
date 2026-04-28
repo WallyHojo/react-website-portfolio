@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import TrackVisibility from 'react-on-screen';
 import { Link, Element } from 'react-scroll';
 import { createContext, useRef, useEffect, useState } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
 
 export const ThemeContext = createContext();
 
@@ -94,21 +93,6 @@ export const ThemeProvider = ({ children }) => {
       toggleButtonRef.current.click();
     }
   };  
-
-  /*
-  Scroll to section
-  */
-  const scrollToTop = () => {
-    scroll.scrollToTop(100);
-  };  
-
-  const scrollToSection = (section) => {
-    scroll.scrollTo(section, {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-    });  
-  };
 
   /*
   Setting window height to each section
