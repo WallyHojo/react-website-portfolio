@@ -58,7 +58,7 @@ function Contact() {
       message,
     };
 
-    emailjs.send('service_6wyqnpf', 'template_fpcny71', templateParams, 'XLYQ7l_ypaQaiyMdp')
+    emailjs.send('service_moelnwl', 'template_fpcny71', templateParams, 'XLYQ7l_ypaQaiyMdp')
       .then((response) => {
         console.log('Email sent successfully!', response.status, response.text);
         setSuccess('Email sent successfully!');
