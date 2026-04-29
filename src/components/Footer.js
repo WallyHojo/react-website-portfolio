@@ -71,7 +71,7 @@ function Footer() {
               </a>
               <a
                 className="position-relative d-inline-block ms-2"
-                href="https://drive.google.com/file/d/1FabBBtBRqmpD-Fk3MuP-ike99TGP4hWe/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Cmxrbzao3a0DLa7opCwLBvyPLhs7-xvh/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

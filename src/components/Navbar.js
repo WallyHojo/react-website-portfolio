@@ -116,7 +116,7 @@ function Navbar() {
                 </li>
                 <li className="nav-item d-sm-none d-md-block">
                   <a
-                    href="https://drive.google.com/file/d/1FabBBtBRqmpD-Fk3MuP-ike99TGP4hWe/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Cmxrbzao3a0DLa7opCwLBvyPLhs7-xvh/view?usp=sharing"
                     target="_blank"
                     className="nav-link text-uppercase"
                     onClick={handleNavClick}
